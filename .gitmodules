@@ -1,0 +1,3 @@
+[submodule "proto"]
+	path = proto
+	url = https://github.com/Balamurugan121101/collab-shared-protos.git
