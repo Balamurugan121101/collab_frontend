@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'config/environment_config.dart';
 import 'core/constants/app_colors.dart';
-import 'services/grpc/grpc_client.dart';
 import 'services/grpc/auth_service.dart';
 import 'services/storage/secure_storage_service.dart';
 import 'viewmodels/auth_viewmodel.dart';
@@ -10,9 +10,11 @@ import 'screens/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  await EnvironmentConfig.load(Environment.dev);
+
   // Initialize services
   final storageService = SecureStorageService();
-  final authService = AuthService(GrpcClient.getChannel());
+  final authService = AuthService();
 
   runApp(
     MultiProvider(
