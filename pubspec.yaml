@@ -36,9 +36,13 @@ dependencies:
   cupertino_icons: ^1.0.8
   provider: ^6.1.0
   grpc: ^4.0.0
-  protobuf: ^3.1.0
+  protobuf: ^5.0.0
+  protoc_plugin: ^24.0.0
   flutter_dotenv: ^6.0.0
   logger: ^2.0.0
+  google_fonts: ^6.1.0
+  flutter_secure_storage: ^9.0.0
+  fixnum: ^1.1.0
 
 
 dev_dependencies:
