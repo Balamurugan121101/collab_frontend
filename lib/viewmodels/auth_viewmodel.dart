@@ -211,7 +211,7 @@ class AuthViewModel extends ChangeNotifier {
   String _extractErrorMessage(dynamic error) {
     final errorStr = error.toString().toLowerCase();
 
-    if (errorStr.contains('unauthenticated')) {
+    if (errorStr.contains('unauthenticated') || errorStr.contains('invalid credentials')) {
       return 'Invalid email or password';
     } else if (errorStr.contains('alreadyexists') || errorStr.contains('already exists')) {
       return 'Email already registered';
